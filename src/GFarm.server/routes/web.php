@@ -17,17 +17,4 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/tarefas', function(){
-    $tarefas = [
-        "lavrar a terra",
-        "fazer colheita",
-        "vender insumos"
-    ];
-
-    $html = "<ul>";
-    foreach($tarefas as $tarefa){
-        $html .= "<li>$tarefa</li>";
-    }
-    $html .= "</ul>";
-    return $html;
-});
+Route::get('/tarefas', "TarefaController@ListarTarefas" );
