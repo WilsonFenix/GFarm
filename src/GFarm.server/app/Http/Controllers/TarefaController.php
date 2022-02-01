@@ -2,22 +2,15 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Client\Request;
-
 class TarefaController extends Controller
 {
-    public function ListarTarefas(Request $request){
+    public function index(){
         $tarefas = [
             "lavrar a terra",
             "fazer colheita",
             "vender insumos"
         ];
     
-        $html = "<ul>";
-        foreach($tarefas as $tarefa){
-            $html .= "<li>$tarefa</li>";
-        }
-        $html .= "</ul>";
-        return $html;
+        return view("dasboard.index", compact('tarefas'));
     }
 }

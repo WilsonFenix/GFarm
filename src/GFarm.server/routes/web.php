@@ -17,4 +17,4 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/tarefas', "TarefaController@ListarTarefas" );
+Route::get('/tarefas', "TarefaController@index" );
