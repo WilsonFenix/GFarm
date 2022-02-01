@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('leyaut');
+    return view('cabeçalho');
 });
 
 Route::get('/tarefas', "TarefaController@index" );
